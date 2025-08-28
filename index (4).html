@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stefan Stanisic Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <style>
+        .hilandarski-font {
+            font-family: 'Cormorant Garamond', serif;
+            font-feature-settings: "kern" 1, "liga" 1;
+        }
+
+        .quote-font {
+            font-family: 'Playfair Display', serif;
+            font-feature-settings: "kern" 1, "liga" 1;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fadeInUp {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+        }
+
+        input:focus {
+            box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #d97706, #ea580c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #fef3c7;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #d97706;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #b45309;
+        }
+
+        .backdrop-blur-sm {
+            backdrop-filter: blur(4px);
+        }
+
+        .hover-lift {
+            transition: all 0.3s ease;
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-hidden {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .section-visible {
+            opacity: 1;
+            transform: translateY(0);
+            transition: all 1s ease-out;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50">
+    <!-- Header -->
+    <header class="w-full py-6 px-4 bg-white/80 backdrop-blur-sm shadow-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto flex justify-center">
+            <div class="w-16 h-16 bg-gradient-to-br from-amber-600 to-orange-700 rounded-full flex items-center justify-center shadow-lg">
+                <span class="text-white font-bold text-xl hilandarski-font">СС</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center px-4 py-20">
+        <div id="hero-section" class="max-w-4xl mx-auto text-center section-hidden">
+            <h1 class="text-6xl md:text-8xl font-bold text-amber-800 mb-8 hilandarski-font leading-tight">
+                Надахнуће
+            </h1>
+            
+            <p class="text-xl md:text-2xl text-amber-700 mb-12 leading-relaxed max-w-5xl mx-auto hilandarski-font">
+                Програм који ће те надахнути да убијеш стару верзију себе, не би ли допустио рођење нове, која ће живот живјети тако да када смрт једног дана покуца на твоја врата, не зажалиш за животом јер знаш да си дао апсолутно све од себе, а остало препустио вољи Божијој.
+            </p>
+            
+            <button onclick="scrollToForm()" class="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white px-12 py-4 rounded-full text-xl font-semibold hilandarski-font shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                Пријави се одмах
+            </button>
+            
+            <div class="mt-16 animate-bounce">
+                <svg class="w-8 h-8 text-amber-600 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stefan Biography Section -->
+    <section id="biography-section" class="py-20 px-4 bg-white/40 backdrop-blur-sm section-hidden">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <!-- Stefan's Photo -->
+                <div class="order-2 md:order-1">
+                    <div class="relative group">
+                        <div class="absolute inset-0 bg-gradient-to-br from-amber-400 to-orange-500 rounded-3xl transform rotate-3 group-hover:rotate-6 transition-transform duration-500"></div>
+                        <div class="relative bg-white p-4 rounded-3xl shadow-2xl transform group-hover:scale-105 transition-all duration-500">
+                            <div class="w-full h-96 bg-gradient-to-br from-amber-100 to-orange-100 rounded-2xl flex items-center justify-center">
+                                <img id="stefan-photo" src="Untitleddesign(1)(1).png" alt="Stefan Stanisić" class="w-full h-full object-cover rounded-2xl" style="display: none;">
+                                <div id="photo-placeholder" class="text-center">
+                                    <div class="w-24 h-24 bg-gradient-to-br from-amber-600 to-orange-700 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                                        <span class="text-white font-bold text-3xl hilandarski-font">СС</span>
+                                    </div>
+                                    <p class="text-amber-700 hilandarski-font text-lg">Стефанова фотографија</p>
+                                    <p class="text-amber-600 hilandarski-font text-sm mt-2">биће додата касније</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Biography Text -->
+                <div class="order-1 md:order-2">
+                    <h2 class="text-4xl md:text-5xl font-bold text-amber-800 mb-8 hilandarski-font">
+                        О Стефану
+                    </h2>
+                    <div class="bg-gradient-to-br from-amber-50 to-orange-50 p-8 rounded-2xl shadow-lg">
+                        <p class="text-xl text-amber-800 leading-relaxed hilandarski-font">
+                            Рођен 2005. у Беранама, Стефан је одрастао у свештеничкој породици где је вера била темељ живота. Завршио је смер информационих технологија у Бијелом Пољу, а свој пут наставља ка Богословском факултету у Београду, вођен жељом да служи Богу и људима.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits-section" class="py-20 px-4 bg-white/60 backdrop-blur-sm section-hidden">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-amber-800 text-center mb-16 hilandarski-font">
+                Шта добијаш од програма
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="bg-gradient-to-br from-amber-100 to-orange-100 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover-lift">
+                    <p class="text-lg text-amber-800 leading-relaxed hilandarski-font">
+                        Кроз овај програм стећи ћеш снагу да савладаш своје слабости и пронађеш веру у свој пут. Научићеш како да препознаш своју унутрашњу снагу и суочиш се са свакодневним изазовима.
+                    </p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-orange-100 to-yellow-100 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover-lift">
+                    <p class="text-lg text-amber-800 leading-relaxed hilandarski-font">
+                        Програм ће те водити да живиш смислен и испуњен живот, постајући боља верзија себе сваког дана док остајеш веран Божијем путу и откриваш мир у својој души.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section id="quote-section" class="py-20 px-4 bg-gradient-to-r from-amber-200 to-orange-200 section-hidden">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="bg-white/80 backdrop-blur-sm p-12 rounded-3xl shadow-2xl">
+                <blockquote class="text-2xl md:text-3xl text-amber-800 italic leading-relaxed quote-font">
+                    „Овде ће бити Стефанов цитат када га пошаљете..."
+                </blockquote>
+                <cite class="block mt-8 text-xl text-amber-700 font-semibold hilandarski-font">
+                    — Стефан Станишић
+                </cite>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Form -->
+    <section id="form-section" class="py-20 px-4 bg-gradient-to-br from-amber-50 to-orange-50 section-hidden">
+        <div class="max-w-2xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-amber-800 text-center mb-12 hilandarski-font">
+                Пријава за менторство
+            </h2>
+            
+            <form id="application-form" class="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl">
+                <div class="mb-6">
+                    <label for="name" class="block text-lg font-semibold text-amber-800 mb-2 hilandarski-font">
+                        Име
+                    </label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        required
+                        class="w-full px-4 py-3 border-2 border-amber-200 rounded-lg focus:border-amber-500 focus:outline-none transition-colors duration-300 text-amber-800 hilandarski-font"
+                        placeholder="Ваше пуно име"
+                    />
+                </div>
+                
+                <div class="mb-8">
+                    <label for="email" class="block text-lg font-semibold text-amber-800 mb-2 hilandarski-font">
+                        Email
+                    </label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        class="w-full px-4 py-3 border-2 border-amber-200 rounded-lg focus:border-amber-500 focus:outline-none transition-colors duration-300 text-amber-800 hilandarski-font"
+                        placeholder="vasa.email@example.com"
+                    />
+                </div>
+                
+                <button
+                    type="submit"
+                    class="w-full bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white px-8 py-4 rounded-lg text-xl font-semibold hilandarski-font shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2"
+                >
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                    </svg>
+                    Пријави се
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-4 bg-amber-800 text-center">
+        <p class="text-amber-100 hilandarski-font">
+            © 2025 Стефан Станишић. Сва права задржана.
+        </p>
+    </footer>
+
+    <script>
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.remove('section-hidden');
+                    entry.target.classList.add('section-visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('#biography-section, #benefits-section, #quote-section, #form-section');
+            sections.forEach(section => observer.observe(section));
+
+            // Hero section appears immediately
+            setTimeout(() => {
+                const heroSection = document.getElementById('hero-section');
+                heroSection.classList.remove('section-hidden');
+                heroSection.classList.add('section-visible');
+            }, 300);
+
+            // Try to load Stefan's photo
+            const stefanPhoto = document.getElementById('stefan-photo');
+            const photoPlaceholder = document.getElementById('photo-placeholder');
+            
+            stefanPhoto.onload = function() {
+                photoPlaceholder.style.display = 'none';
+                stefanPhoto.style.display = 'block';
+            };
+            
+            stefanPhoto.onerror = function() {
+                // Keep placeholder if image fails to load
+                stefanPhoto.style.display = 'none';
+                photoPlaceholder.style.display = 'block';
+            };
+        });
+
+        // Form submission
+        document.getElementById('application-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            
+            console.log('Form submitted:', { name, email });
+            alert('Хвала вам! Ваша пријава је послата.');
+            
+            // Reset form
+            document.getElementById('name').value = '';
+            document.getElementById('email').value = '';
+        });
+
+        // Scroll to form function
+        function scrollToForm() {
+            document.getElementById('form-section').scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        }
+    </script>
+</body>
+</html>
+
