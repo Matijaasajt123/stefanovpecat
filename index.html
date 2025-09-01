@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Надахнуће</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hilandarski+Ustav+5:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hero Section with Form -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Надахнуће</h1>
+                <p class="hero-subtitle">Пријави се на програм и спреми се за велико надахнуће</p>
+                
+                <form id="signupForm" class="signup-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Твоје име" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Твој е-маил" required>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <span class="btn-text">Пријави се</span>
+                        <div class="loading-spinner" style="display: none;"></div>
+                    </button>
+                </form>
+                
+                <p class="disclaimer">
+                    *Пријавом потврђујем да желим да примам обавјештења о овом и сваком наредном програму, као и да се могу одјавити у било ком тренутку.
+                </p>
+                
+                <div id="successMessage" class="success-message" style="display: none;">
+                    <div class="success-icon">✓</div>
+                    <p>Хвала вам! Успешно сте се пријавили на програм.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stefan Section -->
+    <section class="stefan-section">
+        <div class="container">
+            <div class="stefan-content">
+                <div class="stefan-image">
+                    <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg" alt="Стефан Станишић">
+                </div>
+                <h2 class="stefan-name">Стефан Станишић</h2>
+                <p class="stefan-title">Оснивач програма</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">♥</div>
+                    <h3>Лењост</h3>
+                    <p>Превазиђи дух лењости и откриј шта је оно што носиш у себи, а још увијек не радиш на томе.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">★</div>
+                    <h3>Дај све од себе</h3>
+                    <p>Када кренеш са радом на себи, у сваком аспекту дај свој максимум, 100% себе.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🛡</div>
+                    <h3>Уздај се у Господа</h3>
+                    <p>Немој да се бринеш, твоје је да даш свој максимум и уздаш се у Господа, а онда нека буде по вољи Божијој јер једино Он зна куда ће те усмјерити.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Essence Section -->
+    <section class="essence-section">
+        <div class="container">
+            <div class="essence-content">
+                <h2>Суштина програма</h2>
+                <p>Суштина самог програма јесте да ћете кроз исти добити надахнуће да у све дане живота свога не будете лијени, не протраћите драгоцјено вријеме које нам је Господ дао и дате све од себе не би ли сте постали боља верзија себе, уздајући се у Господа.</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
