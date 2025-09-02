@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Hilandarski+Ustav+5:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hilandarski+Ustav+5:wght@400;500;600&display=swap' );
 
 * {
     margin: 0;
@@ -10,7 +10,7 @@ body {
     font-family: 'Hilandarski Ustav 5', serif;
     line-height: 1.6;
     color: #2d3748;
-    /* Svetla pastelna pozadina */
+    /* Nova pozadina zadata od strane korisnika */
     background: linear-gradient(180deg, #fffbeb 0%, #fff7ed 50%, #fef2f2 100%);
     min-height: 100vh;
 }
@@ -19,6 +19,13 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
+}
+
+/* Logo stil */
+.logo {
+    width: 150px; /* Prilagođena veličina logotipa */
+    height: auto;
+    margin-bottom: 1rem; /* Razmak ispod logotipa */
 }
 
 /* Hero Section */
@@ -35,14 +42,14 @@ body {
 .hero-title {
     font-size: 3.5rem;
     font-weight: 600;
-    color: white;
+    color: #92400e; /* Tamnija, topla boja za naslov */
     margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    /* Uklonjena senka jer nije potrebna na svetloj pozadini */
 }
 
 .hero-subtitle {
     font-size: 1.25rem;
-    color: rgba(255, 255, 255, 0.9);
+    color: #b45309; /* Topla boja za podnaslov */
     margin-bottom: 2rem;
     font-weight: 500;
 }
@@ -64,7 +71,7 @@ body {
 .form-group input {
     width: 100%;
     padding: 0.875rem 1rem;
-    border: 2px solid #e2e8f0;
+    border: 2px solid #fed7aa; /* Svetla narandžasta za okvir */
     border-radius: 0.5rem;
     font-size: 1rem;
     font-family: 'Hilandarski Ustav 5', serif;
@@ -74,13 +81,13 @@ body {
 
 .form-group input:focus {
     outline: none;
-    border-color: #ff6b35;
-    box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+    border-color: #d97706; /* Tamnija narandžasta za fokus */
+    box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.1);
 }
 
 .submit-btn {
     width: 100%;
-    background: linear-gradient(135deg, #ff6b35, #f7931e);
+    background: linear-gradient(135deg, #f59e0b, #d97706); /* Zlatno-narandžasti gradijent */
     color: white;
     border: none;
     padding: 0.875rem 1.5rem;
@@ -96,7 +103,7 @@ body {
 
 .submit-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(255, 107, 53, 0.3);
+    box-shadow: 0 10px 20px rgba(217, 119, 6, 0.3);
 }
 
 .submit-btn:disabled {
@@ -122,7 +129,7 @@ body {
 
 .disclaimer {
     font-size: 0.875rem;
-    color: rgba(255, 255, 255, 0.8);
+    color: #92400e; /* Tamnija boja za bolju čitljivost */
     font-style: italic;
     line-height: 1.5;
 }
@@ -167,8 +174,8 @@ body {
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid #ff6b35;
-    box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
+    border: 4px solid #d97706; /* Zlatna boja za okvir slike */
+    box-shadow: 0 10px 30px rgba(217, 119, 6, 0.3);
     transition: transform 0.3s ease;
 }
 
@@ -185,11 +192,11 @@ body {
 
 .stefan-title {
     font-size: 1.1rem;
-    color: #ff6b35;
+    color: #d97706; /* Zlatna boja za titulu */
     font-weight: 500;
 }
 
-/* Benefits Section */
+/* Benefits Section (ako se doda u budućnosti) */
 .benefits-section {
     padding: 2rem 0;
     margin: 0 1rem;
@@ -219,7 +226,7 @@ body {
 .benefit-icon {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: #ff6b35;
+    color: #d97706; /* Zlatna boja za ikone */
 }
 
 .benefit-card h3 {
@@ -304,3 +311,4 @@ body {
         font-size: 1rem;
     }
 }
+
