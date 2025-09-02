@@ -10,7 +10,8 @@ body {
     font-family: 'Hilandarski Ustav 5', serif;
     line-height: 1.6;
     color: #2d3748;
-    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 50%, #ff4757 100%);
+    /* Svetla pastelna pozadina */
+    background: linear-gradient(180deg, #fffbeb 0%, #fff7ed 50%, #fef2f2 100%);
     min-height: 100vh;
 }
 
