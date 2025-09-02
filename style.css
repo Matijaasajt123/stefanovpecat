@@ -23,16 +23,9 @@ body {
 
 /* Logo stil */
 .logo {
-    width: 150px;
-    height: 150px;
-    margin: 0 auto 1.5rem auto; /* Centriran i sa donjom marginom */
-    background-color: #92400e; /* Tamna, topla pozadina za krug */
-    border-radius: 50%; /* Čini pozadinu kružnom */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 15px; /* Unutrašnji razmak da logo ne dodiruje ivice */
-    box-shadow: 0 10px 20px rgba(146, 64, 14, 0.2); /* Suptilna senka */
+    width: 150px; /* Prilagođena veličina logotipa */
+    height: auto;
+    margin-bottom: 1rem; /* Razmak ispod logotipa */
 }
 
 /* Hero Section */
@@ -318,4 +311,5 @@ body {
         font-size: 1rem;
     }
 }
+
 
