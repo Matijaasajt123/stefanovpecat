@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
         loadingSpinner.style.display = 'block';
         
         try {
-            const response = await fetch('https://hook.eu2.make.com/7ydcyy7v3golpqfuh3d4m868r8dn1e4s', {
+            const response = await fetch('https://hook.eu2.make.com/vushnxvbp6jamoic82svnpaogcfvbrqc', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
